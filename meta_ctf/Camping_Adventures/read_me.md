@@ -1,4 +1,4 @@
-[](./lake.jpg)
+![](./lake.jpg)
 
 Downoad the image `lake.jpg`
 

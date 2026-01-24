@@ -9,7 +9,7 @@ nmap -A -T4 -p- <target_ip>
 
 We can easily answer: 
 
-```markdown
+```md
 ***How many services are running under port 1000?*** 
 
 -> `2`

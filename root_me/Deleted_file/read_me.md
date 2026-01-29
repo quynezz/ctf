@@ -1,6 +1,6 @@
 **Description**: Your cousin found a USB stick at the library this morning. He’s not very good with computers, so he’s counting on you to find the owner of this key!
 
-Flag is the identity of the owner in the form `firstname_lastname`
+Flag is the identity of the owner in the form `firstname_lastname`.
 
 First, download the file from problem first 
 

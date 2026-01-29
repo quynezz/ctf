@@ -1,1 +1,1 @@
-Capture the flag collection
+capture the flag collection

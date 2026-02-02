@@ -1,6 +1,5 @@
 First, run the nmap scan on the target host (Scan all the open port within the target host)
 
-
 ```bash 
 nmap -A -T4 -p- <target_ip>
 ```

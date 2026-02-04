@@ -1,0 +1,35 @@
+# Nmap 7.98 scan initiated Wed Feb  4 01:48:34 2026 as: /usr/lib/nmap/nmap --privileged -sVC -O -p- -T4 --min-rate 5000 -oN nmap.txt 10.48.161.171
+Warning: 10.48.161.171 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.48.161.171
+Host is up (0.100s latency).
+Not shown: 58010 filtered tcp ports (no-response), 7522 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.5
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:192.168.129.210
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.5 - secure, fast, stable
+|_End of status
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV failed: 550 Permission denied.
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 79:24:24:be:35:ed:29:3f:ff:42:2a:53:0f:54:f8:47 (RSA)
+|   256 8f:d8:80:26:ae:00:01:db:d7:38:e7:ff:3b:2d:fc:13 (ECDSA)
+|_  256 6b:b9:d7:b2:c6:05:90:4e:c3:04:df:f7:75:72:b8:b0 (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-title: Site doesn't have a title (text/html).
+Aggressive OS guesses: Linux 4.15 - 5.19 (90%), Linux 4.15 (89%), Linux 5.4 (89%), HP P2000 G3 NAS device (89%), Linux 2.6.32 (88%), Linux 2.6.32 - 3.13 (88%), Linux 5.0 (88%), Linux 5.0 - 5.14 (88%), Linux 5.1 - 5.15 (88%), Linux 5.15 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb  4 01:50:20 2026 -- 1 IP address (1 host up) scanned in 106.38 seconds

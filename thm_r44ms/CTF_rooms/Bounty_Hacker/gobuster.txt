@@ -1,0 +1,2 @@
+images              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.48.161.171/images/][0m
+javascript          [36m (Status: 301)[0m [Size: 319][34m [--> http://10.48.161.171/javascript/][0m

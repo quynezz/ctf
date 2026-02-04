@@ -1,0 +1,3 @@
+`user.txt:` THM{CR1M3_SyNd1C4T3}
+
+`root.txt:` THM{80UN7Y_h4cK3r}

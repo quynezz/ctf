@@ -1,0 +1,1 @@
+admin               [36m (Status: 301)[0m [Size: 312][34m [--> http://10.48.178.11/admin/][0m

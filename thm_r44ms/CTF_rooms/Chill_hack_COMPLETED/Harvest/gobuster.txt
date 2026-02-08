@@ -1,0 +1,5 @@
+images              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.49.140.108/images/][0m
+css                 [36m (Status: 301)[0m [Size: 312][34m [--> http://10.49.140.108/css/][0m
+js                  [36m (Status: 301)[0m [Size: 311][34m [--> http://10.49.140.108/js/][0m
+fonts               [36m (Status: 301)[0m [Size: 314][34m [--> http://10.49.140.108/fonts/][0m
+secret              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.49.140.108/secret/][0m

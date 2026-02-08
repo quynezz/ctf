@@ -1,0 +1,52 @@
+Anurodha
+
+Apaar
+
+
+
+www-data@ip-10-49-140-108:/var/www/files$ cat hacker.php
+<html>
+<head>
+<body>
+<style>
+body {
+  background-image: url('images/002d7e638fb463fb7a266f5ffc7ac47d.gif');
+}
+h2
+{
+        color:red;
+        font-weight: bold;
+}
+h1
+{
+        color: yellow;
+        font-weight: bold;
+}
+</style>
+<center>
+        <img src = "images/hacker-with-laptop_23-2147985341.jpg"><br>
+        <h1 style="background-color:red;">You have reached this far. </h2>
+        <h1 style="background-color:black;">Look in the dark! You will find your answer</h1>
+</center>
+</head>
+</html>
+
+
+
+www-data@ip-10-49-140-108:/var/www/files$ cat index.php 
+	$con = new PDO("mysql:dbname=webportal;host=localhost","root","!@m+her00+@db");
+www-data@ip-10-49-140-108:/var/www/files$ 
+
+
+
+
+
+
+
++----+-----------+----------+-----------+----------------------------------+
+| id | firstname | lastname | username  | password                         |
++----+-----------+----------+-----------+----------------------------------+
+|  1 | Anurodh   | Acharya  | Aurick    | 7e53614ced3640d5de23f111806cc4fd |
+|  2 | Apaar     | Dahal    | cullapaar | 686216240e5af30df0501e53c789a649 |
++----+-----------+----------+-----------+----------------------------------+
+

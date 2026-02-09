@@ -1,0 +1,5 @@
+n = int("581695969015253365094191591547859387620042736036246486373595515576333693")
+hex_str = hex(n)[:2]
+print(hex_str)
+print(bytes.fromhex(hex_str).decode())
+

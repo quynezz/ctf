@@ -1,0 +1,26 @@
+_archive            [36m (Status: 301)[0m [Size: 324][34m [--> http://10.49.178.215/joomla/_archive/][0m
+_database           [36m (Status: 301)[0m [Size: 325][34m [--> http://10.49.178.215/joomla/_database/][0m
+_files              [36m (Status: 301)[0m [Size: 322][34m [--> http://10.49.178.215/joomla/_files/][0m
+_test               [36m (Status: 301)[0m [Size: 321][34m [--> http://10.49.178.215/joomla/_test/][0m
+~www                [36m (Status: 301)[0m [Size: 320][34m [--> http://10.49.178.215/joomla/~www/][0m
+administrator       [36m (Status: 301)[0m [Size: 329][34m [--> http://10.49.178.215/joomla/administrator/][0m
+bin                 [36m (Status: 301)[0m [Size: 319][34m [--> http://10.49.178.215/joomla/bin/][0m
+build               [36m (Status: 301)[0m [Size: 321][34m [--> http://10.49.178.215/joomla/build/][0m
+cache               [36m (Status: 301)[0m [Size: 321][34m [--> http://10.49.178.215/joomla/cache/][0m
+components          [36m (Status: 301)[0m [Size: 326][34m [--> http://10.49.178.215/joomla/components/][0m
+images              [36m (Status: 301)[0m [Size: 322][34m [--> http://10.49.178.215/joomla/images/][0m
+includes            [36m (Status: 301)[0m [Size: 324][34m [--> http://10.49.178.215/joomla/includes/][0m
+index.php           [32m (Status: 200)[0m [Size: 12484]
+installation        [36m (Status: 301)[0m [Size: 328][34m [--> http://10.49.178.215/joomla/installation/][0m
+language            [36m (Status: 301)[0m [Size: 324][34m [--> http://10.49.178.215/joomla/language/][0m
+layouts             [36m (Status: 301)[0m [Size: 323][34m [--> http://10.49.178.215/joomla/layouts/][0m
+libraries           [36m (Status: 301)[0m [Size: 325][34m [--> http://10.49.178.215/joomla/libraries/][0m
+LICENSE.txt         [32m (Status: 200)[0m [Size: 18092]
+media               [36m (Status: 301)[0m [Size: 321][34m [--> http://10.49.178.215/joomla/media/][0m
+modules             [36m (Status: 301)[0m [Size: 323][34m [--> http://10.49.178.215/joomla/modules/][0m
+plugins             [36m (Status: 301)[0m [Size: 323][34m [--> http://10.49.178.215/joomla/plugins/][0m
+README.txt          [32m (Status: 200)[0m [Size: 4793]
+templates           [36m (Status: 301)[0m [Size: 325][34m [--> http://10.49.178.215/joomla/templates/][0m
+tests               [36m (Status: 301)[0m [Size: 321][34m [--> http://10.49.178.215/joomla/tests/][0m
+tmp                 [36m (Status: 301)[0m [Size: 319][34m [--> http://10.49.178.215/joomla/tmp/][0m
+web.config.txt      [32m (Status: 200)[0m [Size: 1859]

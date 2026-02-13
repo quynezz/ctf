@@ -1,0 +1,16 @@
+# Nmap 7.98 scan initiated Fri Feb 13 11:03:27 2026 as: /usr/lib/nmap/nmap --privileged -sVC -O -p- -T4 --min-rate 5000 -oN nmap.txt 10.48.152.250
+Warning: 10.48.152.250 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.48.152.250
+Host is up (0.14s latency).
+Not shown: 65471 closed tcp ports (reset), 63 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    PHP cli server 5.5 or later (PHP 8.1.0-dev)
+|_http-title:  Admin Dashboard
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.19
+Network Distance: 3 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Feb 13 11:04:30 2026 -- 1 IP address (1 host up) scanned in 63.17 seconds

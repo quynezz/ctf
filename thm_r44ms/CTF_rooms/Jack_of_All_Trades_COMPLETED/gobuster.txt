@@ -1,0 +1,1 @@
+index.php           [36m (Status: 302)[0m [Size: 0][34m [--> ../index.html][0m

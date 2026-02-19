@@ -1,0 +1,34 @@
+# Nmap 7.98 scan initiated Thu Feb 19 06:23:07 2026 as: /usr/lib/nmap/nmap --privileged -sV -sC -O -T4 --min-rate 5000 -oN 0day.txt 10.49.145.247
+Nmap scan report for 10.49.145.247
+Host is up (0.10s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 57:20:82:3c:62:aa:8f:42:23:c0:b8:93:99:6f:49:9c (DSA)
+|   2048 4c:40:db:32:64:0d:11:0c:ef:4f:b8:5b:73:9b:c7:6b (RSA)
+|   256 f7:6f:78:d5:83:52:a6:4d:da:21:3c:55:47:b7:2d:6d (ECDSA)
+|_  256 a5:b4:f0:84:b6:a7:8d:eb:0a:9d:3e:74:37:33:65:16 (ED25519)
+80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: 0day
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.98%E=4%D=2/19%OT=22%CT=1%CU=33543%PV=Y%DS=3%DC=I%G=Y%TM=6996F2B
+OS:2%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=103%TI=Z%CI=I%II=I%TS=8)SEQ
+OS:(SP=106%GCD=1%ISR=107%TI=Z%CI=I%II=I%TS=8)SEQ(SP=107%GCD=1%ISR=10A%TI=Z%
+OS:CI=I%II=I%TS=8)SEQ(SP=107%GCD=1%ISR=10B%TI=Z%CI=I%II=I%TS=8)SEQ(SP=107%G
+OS:CD=1%ISR=10D%TI=Z%CI=I%II=I%TS=8)OPS(O1=M4E8ST11NW7%O2=M4E8ST11NW7%O3=M4
+OS:E8NNT11NW7%O4=M4E8ST11NW7%O5=M4E8ST11NW7%O6=M4E8ST11)WIN(W1=68DF%W2=68DF
+OS:%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M4E8NNSNW7%C
+OS:C=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%
+OS:T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD
+OS:=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S
+OS:=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK
+OS:=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 3 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb 19 06:23:30 2026 -- 1 IP address (1 host up) scanned in 23.21 seconds

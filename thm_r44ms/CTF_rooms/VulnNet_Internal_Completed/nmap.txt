@@ -1,0 +1,74 @@
+# Nmap 7.98 scan initiated Mon Feb 23 03:47:13 2026 as: /usr/lib/nmap/nmap --privileged -A -T4 -O -oN vul.txt 10.48.147.244
+Nmap scan report for 10.48.147.244
+Host is up (0.10s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT     STATE    SERVICE     VERSION
+22/tcp   open     ssh         OpenSSH 8.2p1 Ubuntu 4ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 dc:a8:69:b8:7b:d5:d5:c3:87:d7:b2:35:1b:a3:6f:0c (RSA)
+|   256 d3:2d:d0:f5:fb:40:a0:90:bd:71:9d:c3:02:4b:c8:e0 (ECDSA)
+|_  256 ff:4c:ac:04:86:4d:cf:72:e4:50:fe:6d:ce:9c:b4:be (ED25519)
+111/tcp  open     rpcbind     2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/udp   nfs
+|   100003  3           2049/udp6  nfs
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      33875/tcp   mountd
+|   100005  1,2,3      36265/tcp6  mountd
+|   100005  1,2,3      38934/udp6  mountd
+|   100005  1,2,3      43152/udp   mountd
+|   100021  1,3,4      35891/tcp   nlockmgr
+|   100021  1,3,4      46849/tcp6  nlockmgr
+|   100021  1,3,4      51502/udp   nlockmgr
+|   100021  1,3,4      56010/udp6  nlockmgr
+|   100227  3           2049/tcp   nfs_acl
+|   100227  3           2049/tcp6  nfs_acl
+|   100227  3           2049/udp   nfs_acl
+|_  100227  3           2049/udp6  nfs_acl
+139/tcp  open     netbios-ssn Samba smbd 4
+445/tcp  open     netbios-ssn Samba smbd 4
+873/tcp  open     rsync       (protocol version 31)
+2049/tcp open     nfs         3-4 (RPC #100003)
+9090/tcp filtered zeus-admin
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.98%E=4%D=2/23%OT=22%CT=1%CU=42005%PV=Y%DS=3%DC=T%G=Y%TM=699C143
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=10D%TI=Z%CI=Z%II=I%TS=A)SEQ
+OS:(SP=102%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=104%GCD=1%ISR=105%TI=Z%
+OS:CI=Z%II=I%TS=A)SEQ(SP=105%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=FE%GC
+OS:D=1%ISR=10E%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M4E8ST11NW7%O2=M4E8ST11NW7%O3=M4E
+OS:8NNT11NW7%O4=M4E8ST11NW7%O5=M4E8ST11NW7%O6=M4E8ST11)WIN(W1=F4B3%W2=F4B3%
+OS:W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M4E8NNSNW7%CC
+OS:=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T
+OS:=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=
+OS:0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=
+OS:Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=
+OS:G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 3 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-time: 
+|   date: 2026-02-23T08:47:44
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: , NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+|_clock-skew: -1s
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT      ADDRESS
+1   99.14 ms 192.168.128.1
+2   ...
+3   99.73 ms 10.48.147.244
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb 23 03:47:49 2026 -- 1 IP address (1 host up) scanned in 36.24 seconds

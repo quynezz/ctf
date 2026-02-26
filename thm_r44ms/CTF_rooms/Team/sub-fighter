@@ -1,0 +1,12 @@
+Target: http://team.thm/
+Total requests: 4614
+==================================================================
+ID    Response   Lines      Word         Chars          Request    
+==================================================================
+01241:  C=200      9 L	      20 W	    187 Ch	  "dev"
+04531:  C=200     89 L	     220 W	   2966 Ch	  "www"
+
+Total time: 0
+Processed Requests: 4614
+Filtered Requests: 4612
+Requests/sec.: 0

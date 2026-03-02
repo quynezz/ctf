@@ -1,0 +1,46 @@
+# Nmap 7.98 scan initiated Fri Feb 27 08:41:07 2026 as: /usr/lib/nmap/nmap --privileged -Pn -A -T4 -p- -oN nmap 10.49.151.124
+Nmap scan report for 10.49.151.124
+Host is up (0.099s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 cb:04:96:2d:8f:42:35:b9:9f:63:3e:5d:70:80:e5:ed (RSA)
+|   256 99:a5:57:27:51:05:de:ec:17:ff:37:6f:ac:c0:28:0c (ECDSA)
+|_  256 d7:9f:1f:1d:84:c5:29:41:0c:93:86:bf:98:0f:f7:50 (ED25519)
+80/tcp open  http    Apache httpd 2.4.38 ((Debian))
+| http-title: 24X7 System+
+|_Requested resource was /login.php
+| http-robots.txt: 1 disallowed entry 
+|_/backup/chat.txt
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.38 (Debian)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.98%E=4%D=2/27%OT=22%CT=1%CU=32865%PV=Y%DS=3%DC=T%G=Y%TM=69A19F9
+OS:F%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10D%TI=Z%CI=Z%II=I%TS=A)SEQ
+OS:(SP=105%GCD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=107%GCD=1%ISR=109%TI=Z%
+OS:CI=Z%II=I%TS=A)SEQ(SP=FB%GCD=1%ISR=105%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=FC%GCD
+OS:=1%ISR=10E%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M4E8ST11NW7%O2=M4E8ST11NW7%O3=M4E8
+OS:NNT11NW7%O4=M4E8ST11NW7%O5=M4E8ST11NW7%O6=M4E8ST11)WIN(W1=F4B3%W2=F4B3%W
+OS:3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M4E8NNSNW7%CC=
+OS:Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=
+OS:40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0
+OS:%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z
+OS:%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G
+OS:%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 3 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 199/tcp)
+HOP RTT      ADDRESS
+1   97.78 ms 192.168.128.1
+2   ...
+3   99.07 ms 10.49.151.124
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Feb 27 08:43:59 2026 -- 1 IP address (1 host up) scanned in 171.56 seconds

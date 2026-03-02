@@ -1,0 +1,71 @@
+# Nmap 7.98 scan initiated Mon Mar  2 02:06:19 2026 as: /usr/lib/nmap/nmap --privileged -sV -A -O -T4 -oN nmap.txt 10.48.160.179
+Nmap scan report for 10.48.160.179
+Host is up (0.099s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 8.2p1 Ubuntu 4ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 d6:0a:45:13:9c:74:35:7e:c4:aa:09:91:39:bf:31:aa (RSA)
+|   256 1b:44:aa:f8:4d:35:83:62:9a:c2:2c:16:20:0a:fd:55 (ECDSA)
+|_  256 89:3d:7c:1f:f9:22:e4:38:dc:31:08:d2:17:6d:0c:be (ED25519)
+8000/tcp open  http-alt SimpleHTTP/0.6 Python/3.11.2
+|_http-server-header: SimpleHTTP/0.6 Python/3.11.2
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+|_http-open-proxy: Proxy might be redirecting requests
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, JavaRMI, LANDesk-RC, NotesRPC, Socks4, X11Probe, afp, giop: 
+|     source code string cannot contain null bytes
+|   FourOhFourRequest, LPDString, SIPOptions: 
+|     invalid syntax (<string>, line 1)
+|   GetRequest: 
+|     name 'GET' is not defined
+|   HTTPOptions, RTSPRequest: 
+|     name 'OPTIONS' is not defined
+|   Help: 
+|_    name 'HELP' is not defined
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8000-TCP:V=7.98%I=7%D=3/2%Time=69A536FA%P=x86_64-pc-linux-gnu%r(Gen
+SF:ericLines,1,"\n")%r(GetRequest,1A,"name\x20'GET'\x20is\x20not\x20define
+SF:d\n")%r(X11Probe,2D,"source\x20code\x20string\x20cannot\x20contain\x20n
+SF:ull\x20bytes\n")%r(FourOhFourRequest,22,"invalid\x20syntax\x20\(<string
+SF:>,\x20line\x201\)\n")%r(Socks4,2D,"source\x20code\x20string\x20cannot\x
+SF:20contain\x20null\x20bytes\n")%r(HTTPOptions,1E,"name\x20'OPTIONS'\x20i
+SF:s\x20not\x20defined\n")%r(RTSPRequest,1E,"name\x20'OPTIONS'\x20is\x20no
+SF:t\x20defined\n")%r(DNSVersionBindReqTCP,2D,"source\x20code\x20string\x2
+SF:0cannot\x20contain\x20null\x20bytes\n")%r(DNSStatusRequestTCP,2D,"sourc
+SF:e\x20code\x20string\x20cannot\x20contain\x20null\x20bytes\n")%r(Help,1B
+SF:,"name\x20'HELP'\x20is\x20not\x20defined\n")%r(LPDString,22,"invalid\x2
+SF:0syntax\x20\(<string>,\x20line\x201\)\n")%r(SIPOptions,22,"invalid\x20s
+SF:yntax\x20\(<string>,\x20line\x201\)\n")%r(LANDesk-RC,2D,"source\x20code
+SF:\x20string\x20cannot\x20contain\x20null\x20bytes\n")%r(NotesRPC,2D,"sou
+SF:rce\x20code\x20string\x20cannot\x20contain\x20null\x20bytes\n")%r(JavaR
+SF:MI,2D,"source\x20code\x20string\x20cannot\x20contain\x20null\x20bytes\n
+SF:")%r(afp,2D,"source\x20code\x20string\x20cannot\x20contain\x20null\x20b
+SF:ytes\n")%r(giop,2D,"source\x20code\x20string\x20cannot\x20contain\x20nu
+SF:ll\x20bytes\n");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.98%E=4%D=3/2%OT=22%CT=1%CU=35222%PV=Y%DS=3%DC=T%G=Y%TM=69A537B0
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%TS=A)SEQ(
+OS:SP=102%GCD=1%ISR=107%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=104%GCD=1%ISR=10B%TI=Z%C
+OS:I=Z%II=I%TS=A)SEQ(SP=EF%GCD=1%ISR=F3%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=F9%GCD=2
+OS:%ISR=107%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M4E8ST11NW7%O2=M4E8ST11NW7%O3=M4E8NN
+OS:T11NW7%O4=M4E8ST11NW7%O5=M4E8ST11NW7%O6=M4E8ST11)WIN(W1=F4B3%W2=F4B3%W3=
+OS:F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M4E8NNSNW7%CC=Y%
+OS:Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40
+OS:%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q
+OS:=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A
+OS:=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%R
+OS:UCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 3 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   100.10 ms 192.168.128.1
+2   ...
+3   100.24 ms 10.48.160.179
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar  2 02:09:36 2026 -- 1 IP address (1 host up) scanned in 197.14 seconds

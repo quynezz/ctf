@@ -1,0 +1,20 @@
+# Nmap 7.98 scan initiated Tue Mar  3 22:45:03 2026 as: /usr/lib/nmap/nmap --privileged -sC -sV -T4 --min-rate 5000 -oN billing_nmap 10.48.191.102
+Nmap scan report for 10.48.191.102
+Host is up (0.10s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 9.2p1 Debian 2+deb12u6 (protocol 2.0)
+| ssh-hostkey: 
+|   256 30:0f:58:0c:7a:36:ee:4c:91:94:5b:9f:04:62:68:86 (ECDSA)
+|_  256 df:35:02:8c:2f:3f:41:c1:56:29:38:09:d9:ea:d2:cf (ED25519)
+80/tcp   open  http    Apache httpd 2.4.62 ((Debian))
+| http-title:             MagnusBilling        
+|_Requested resource was http://10.48.191.102/mbilling/
+| http-robots.txt: 1 disallowed entry 
+|_/mbilling/
+|_http-server-header: Apache/2.4.62 (Debian)
+3306/tcp open  mysql   MariaDB 10.3.23 or earlier (unauthorized)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar  3 22:45:15 2026 -- 1 IP address (1 host up) scanned in 12.14 seconds

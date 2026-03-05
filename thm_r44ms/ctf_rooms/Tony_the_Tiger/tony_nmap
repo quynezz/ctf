@@ -1,0 +1,169 @@
+# Nmap 7.94SVN scan initiated Thu Mar  5 15:07:26 2026 as: nmap -A -T4 -p- -oN tony_nmap 10.48.148.64
+Warning: 10.48.148.64 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.48.148.64
+Host is up (0.10s latency).
+Not shown: 65516 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE     VERSION
+22/tcp    open     ssh         OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 d6:97:8c:b9:74:d0:f3:9e:fe:f3:a5:ea:f8:a9:b5:7a (DSA)
+|   2048 33:a4:7b:91:38:58:50:30:89:2d:e4:57:bb:07:bb:2f (RSA)
+|   256 21:01:8b:37:f5:1e:2b:c5:57:f1:b0:42:b7:32:ab:ea (ECDSA)
+|_  256 f6:36:07:3c:3b:3d:71:30:c4:cd:2a:13:00:b5:25:ae (ED25519)
+80/tcp    open     http        Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-generator: Hugo 0.66.0
+|_http-title: Tony&#39;s Blog
+1090/tcp  open     java-rmi    Java RMI
+|_rmi-dumpregistry: ERROR: Script execution failed (use -d to debug)
+1091/tcp  open     java-rmi    Java RMI
+1098/tcp  open     java-rmi    Java RMI
+1099/tcp  open     java-object Java Object Serialization
+| fingerprint-strings: 
+|   NULL: 
+|     java.rmi.MarshalledObject|
+|     hash[
+|     locBytest
+|     objBytesq
+|     #http://thm-java-deserial.home:8083/q
+|     org.jnp.server.NamingServer_Stub
+|     java.rmi.server.RemoteStub
+|     java.rmi.server.RemoteObject
+|     xpwA
+|     UnicastRef2
+|_    thm-java-deserial.home
+3873/tcp  open     java-object Java Object Serialization
+4446/tcp  open     java-object Java Object Serialization
+4712/tcp  open     msdtc       Microsoft Distributed Transaction Coordinator (error)
+4713/tcp  open     pulseaudio?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NULL, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, afp, giop, ms-sql-s, oracle-tns: 
+|_    126a
+5445/tcp  open     smbdirect?
+5455/tcp  open     apc-5455?
+5500/tcp  open     hotline?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     NTLM
+|     CRAM-MD5
+|     GSSAPI
+|     DIGEST-MD5
+|     thm-java-deserial
+|   DNSVersionBindReqTCP, Help, Kerberos: 
+|     NTLM
+|     GSSAPI
+|     DIGEST-MD5
+|     CRAM-MD5
+|     thm-java-deserial
+|   GenericLines, NULL: 
+|     CRAM-MD5
+|     DIGEST-MD5
+|     GSSAPI
+|     NTLM
+|     thm-java-deserial
+|   GetRequest, SSLSessionReq, TLSSessionReq: 
+|     DIGEST-MD5
+|     NTLM
+|     GSSAPI
+|     CRAM-MD5
+|     thm-java-deserial
+|   HTTPOptions: 
+|     NTLM
+|     CRAM-MD5
+|     DIGEST-MD5
+|     GSSAPI
+|     thm-java-deserial
+|   RPCCheck, TerminalServerCookie: 
+|     DIGEST-MD5
+|     GSSAPI
+|     CRAM-MD5
+|     NTLM
+|     thm-java-deserial
+|   RTSPRequest: 
+|     GSSAPI
+|     DIGEST-MD5
+|     CRAM-MD5
+|     NTLM
+|_    thm-java-deserial
+5501/tcp  open     tcpwrapped
+8009/tcp  open     ajp13       Apache Jserv (Protocol v1.3)
+| ajp-methods: 
+|   Supported methods: GET HEAD POST PUT DELETE TRACE OPTIONS
+|   Potentially risky methods: PUT DELETE TRACE
+|_  See https://nmap.org/nsedoc/scripts/ajp-methods.html
+8080/tcp  open     http        Apache Tomcat/Coyote JSP engine 1.1
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Welcome to JBoss AS
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE TRACE
+8083/tcp  open     http        JBoss service httpd
+|_http-title: Site doesn't have a title (text/html).
+16093/tcp filtered unknown
+61572/tcp filtered unknown
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1099-TCP:V=7.94SVN%I=7%D=3/5%Time=69A93B72%P=x86_64-pc-linux-gnu%r(
+SF:NULL,17B,"\xac\xed\0\x05sr\0\x19java\.rmi\.MarshalledObject\|\xbd\x1e\x
+SF:97\xedc\xfc>\x02\0\x03I\0\x04hash\[\0\x08locBytest\0\x02\[B\[\0\x08objB
+SF:ytesq\0~\0\x01xp\xaaB\xc7\xb3ur\0\x02\[B\xac\xf3\x17\xf8\x06\x08T\xe0\x
+SF:02\0\0xp\0\0\x004\xac\xed\0\x05t\0#http://thm-java-deserial\.home:8083/
+SF:q\0~\0\0q\0~\0\0uq\0~\0\x03\0\0\0\xcd\xac\xed\0\x05sr\0\x20org\.jnp\.se
+SF:rver\.NamingServer_Stub\0\0\0\0\0\0\0\x02\x02\0\0xr\0\x1ajava\.rmi\.ser
+SF:ver\.RemoteStub\xe9\xfe\xdc\xc9\x8b\xe1e\x1a\x02\0\0xr\0\x1cjava\.rmi\.
+SF:server\.RemoteObject\xd3a\xb4\x91\x0ca3\x1e\x03\0\0xpwA\0\x0bUnicastRef
+SF:2\0\0\x16thm-java-deserial\.home\0\0\x04J\xab6\xf6\+\x8c\x91\xe2\xb5\x8
+SF:2\x1c\xd8\xc6\0\0\x01\x9c\xbd\x07l\xdc\x80\x02\0x");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3873-TCP:V=7.94SVN%I=7%D=3/5%Time=69A93B78%P=x86_64-pc-linux-gnu%r(
+SF:NULL,4,"\xac\xed\0\x05");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4446-TCP:V=7.94SVN%I=7%D=3/5%Time=69A93B78%P=x86_64-pc-linux-gnu%r(
+SF:NULL,4,"\xac\xed\0\x05");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4713-TCP:V=7.94SVN%I=7%D=3/5%Time=69A93B78%P=x86_64-pc-linux-gnu%r(
+SF:NULL,5,"126a\n")%r(GenericLines,5,"126a\n")%r(GetRequest,5,"126a\n")%r(
+SF:HTTPOptions,5,"126a\n")%r(RTSPRequest,5,"126a\n")%r(RPCCheck,5,"126a\n"
+SF:)%r(DNSVersionBindReqTCP,5,"126a\n")%r(DNSStatusRequestTCP,5,"126a\n")%
+SF:r(Help,5,"126a\n")%r(SSLSessionReq,5,"126a\n")%r(TerminalServerCookie,5
+SF:,"126a\n")%r(TLSSessionReq,5,"126a\n")%r(Kerberos,5,"126a\n")%r(SMBProg
+SF:Neg,5,"126a\n")%r(X11Probe,5,"126a\n")%r(FourOhFourRequest,5,"126a\n")%
+SF:r(LPDString,5,"126a\n")%r(LDAPSearchReq,5,"126a\n")%r(LDAPBindReq,5,"12
+SF:6a\n")%r(SIPOptions,5,"126a\n")%r(LANDesk-RC,5,"126a\n")%r(TerminalServ
+SF:er,5,"126a\n")%r(NCP,5,"126a\n")%r(NotesRPC,5,"126a\n")%r(JavaRMI,5,"12
+SF:6a\n")%r(WMSRequest,5,"126a\n")%r(oracle-tns,5,"126a\n")%r(ms-sql-s,5,"
+SF:126a\n")%r(afp,5,"126a\n")%r(giop,5,"126a\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5500-TCP:V=7.94SVN%I=7%D=3/5%Time=69A93B78%P=x86_64-pc-linux-gnu%r(
+SF:NULL,4B,"\0\0\0G\0\0\x01\0\x03\x04\0\0\0\x03\x03\x04\0\0\0\x02\x01\x08C
+SF:RAM-MD5\x01\nDIGEST-MD5\x01\x06GSSAPI\x01\x04NTLM\x02\x11thm-java-deser
+SF:ial")%r(GenericLines,4B,"\0\0\0G\0\0\x01\0\x03\x04\0\0\0\x03\x03\x04\0\
+SF:0\0\x02\x01\x08CRAM-MD5\x01\nDIGEST-MD5\x01\x06GSSAPI\x01\x04NTLM\x02\x
+SF:11thm-java-deserial")%r(GetRequest,4B,"\0\0\0G\0\0\x01\0\x03\x04\0\0\0\
+SF:x03\x03\x04\0\0\0\x02\x01\nDIGEST-MD5\x01\x04NTLM\x01\x06GSSAPI\x01\x08
+SF:CRAM-MD5\x02\x11thm-java-deserial")%r(HTTPOptions,4B,"\0\0\0G\0\0\x01\0
+SF:\x03\x04\0\0\0\x03\x03\x04\0\0\0\x02\x01\x04NTLM\x01\x08CRAM-MD5\x01\nD
+SF:IGEST-MD5\x01\x06GSSAPI\x02\x11thm-java-deserial")%r(RTSPRequest,4B,"\0
+SF:\0\0G\0\0\x01\0\x03\x04\0\0\0\x03\x03\x04\0\0\0\x02\x01\x06GSSAPI\x01\n
+SF:DIGEST-MD5\x01\x08CRAM-MD5\x01\x04NTLM\x02\x11thm-java-deserial")%r(RPC
+SF:Check,4B,"\0\0\0G\0\0\x01\0\x03\x04\0\0\0\x03\x03\x04\0\0\0\x02\x01\nDI
+SF:GEST-MD5\x01\x06GSSAPI\x01\x08CRAM-MD5\x01\x04NTLM\x02\x11thm-java-dese
+SF:rial")%r(DNSVersionBindReqTCP,4B,"\0\0\0G\0\0\x01\0\x03\x04\0\0\0\x03\x
+SF:03\x04\0\0\0\x02\x01\x04NTLM\x01\x06GSSAPI\x01\nDIGEST-MD5\x01\x08CRAM-
+SF:MD5\x02\x11thm-java-deserial")%r(DNSStatusRequestTCP,4B,"\0\0\0G\0\0\x0
+SF:1\0\x03\x04\0\0\0\x03\x03\x04\0\0\0\x02\x01\x04NTLM\x01\x08CRAM-MD5\x01
+SF:\x06GSSAPI\x01\nDIGEST-MD5\x02\x11thm-java-deserial")%r(Help,4B,"\0\0\0
+SF:G\0\0\x01\0\x03\x04\0\0\0\x03\x03\x04\0\0\0\x02\x01\x04NTLM\x01\x06GSSA
+SF:PI\x01\nDIGEST-MD5\x01\x08CRAM-MD5\x02\x11thm-java-deserial")%r(SSLSess
+SF:ionReq,4B,"\0\0\0G\0\0\x01\0\x03\x04\0\0\0\x03\x03\x04\0\0\0\x02\x01\nD
+SF:IGEST-MD5\x01\x04NTLM\x01\x06GSSAPI\x01\x08CRAM-MD5\x02\x11thm-java-des
+SF:erial")%r(TerminalServerCookie,4B,"\0\0\0G\0\0\x01\0\x03\x04\0\0\0\x03\
+SF:x03\x04\0\0\0\x02\x01\nDIGEST-MD5\x01\x06GSSAPI\x01\x08CRAM-MD5\x01\x04
+SF:NTLM\x02\x11thm-java-deserial")%r(TLSSessionReq,4B,"\0\0\0G\0\0\x01\0\x
+SF:03\x04\0\0\0\x03\x03\x04\0\0\0\x02\x01\nDIGEST-MD5\x01\x04NTLM\x01\x06G
+SF:SSAPI\x01\x08CRAM-MD5\x02\x11thm-java-deserial")%r(Kerberos,4B,"\0\0\0G
+SF:\0\0\x01\0\x03\x04\0\0\0\x03\x03\x04\0\0\0\x02\x01\x04NTLM\x01\x06GSSAP
+SF:I\x01\nDIGEST-MD5\x01\x08CRAM-MD5\x02\x11thm-java-deserial");
+Service Info: OSs: Linux, Windows; CPE: cpe:/o:linux:linux_kernel, cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar  5 15:17:52 2026 -- 1 IP address (1 host up) scanned in 625.55 seconds

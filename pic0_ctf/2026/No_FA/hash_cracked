@@ -1,0 +1,14 @@
+┌──(zorkis㉿zorkkis)-[~/…/ctf/pic0_ctf/2026/No_FA]
+└─$ john --wordlist=/usr/share/wordlists/rockyou.txt --format=Raw-SHA256 hash
+Using default input encoding: UTF-8
+Loaded 20 password hashes with no different salts (Raw-SHA256 [SHA256 256/256 AVX2 8x])
+Warning: poor OpenMP scalability for this hash type, consider --fork=2
+Will run 2 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+apple123         (john.doe)
+apple@123        (admin)
+2g 0:00:00:04 DONE (2026-03-20 22:40) 0.4819g/s 3456Kp/s 3456Kc/s 62717KC/s (454579)..*7¡Vamos!
+Use the --show --format=Raw-SHA256 options to display all of the cracked passwords reliably
+Session completed.
+
+┌──(zorkis㉿zorkkis)-[~/…/ctf

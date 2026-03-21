@@ -1,3 +1,4 @@
+START OF THE CHALLENGE
 ```bash
 $  nc foggy-cliff.picoctf.net 62602
 ===Welcome to the Text Transformations Challenge!===

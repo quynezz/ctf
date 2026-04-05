@@ -1,0 +1,8 @@
+Hint:
+
+- The flag is split into multiple parts as a zipped file.
+- Use Linux commands to combine the parts into one file.
+- The zip file is password protected. Use this "supersecret" password to extract the zip file.
+- After unzipping, check the extracted text file for the flag.
+
+

@@ -1,4 +1,4 @@
-First, let's copy all of the file in the remote instances (because i can stand of the laggy movement when interact with the kernel :)
+First, let's copy all of the file in the remote instances (because i can not stand of the laggy movement when interact with the kernel :)
 
 ```bash
 # do this on local machine -> not ssh machine
@@ -21,7 +21,7 @@ Hint:
 - After unzipping, check the extracted text file for the flag.
 ```
 so it very simple task, just concatenate all of the file and then unzip it with the super duper secret message to reveal the flag :)
--> i create a bash script to not do it manual.
+-> i create a bash script to not do it manually.
 
 ```bash
 #!/usr/bin/env bash

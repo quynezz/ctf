@@ -1,0 +1,16 @@
+# Nmap 7.98 scan initiated Wed Feb 11 08:24:40 2026 as: /usr/lib/nmap/nmap --privileged -sVC -O -p- -T4 --min-rate 5000 -oN nmap.txt 10.129.154.130
+Warning: 10.129.154.130 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.129.154.130
+Host is up (0.24s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  Linux telnetd
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.19
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb 11 08:25:26 2026 -- 1 IP address (1 host up) scanned in 45.86 seconds
